@@ -8,7 +8,7 @@ The project is structured to offer two ways to run the application:
 
 ---
 
-## 📂 Project Directory Structure
+##  Project Directory Structure
 
 ```text
 Graphmind/
@@ -29,7 +29,7 @@ Graphmind/
 
 ---
 
-## ⚙️ Prerequisites & Installation Requirements
+##  Prerequisites & Installation Requirements
 
 Depending on how you wish to run GraphMind, ensure you meet the following requirements:
 
@@ -44,7 +44,7 @@ Depending on how you wish to run GraphMind, ensure you meet the following requir
 
 ---
 
-## 🚀 How to Run GraphMind
+##  How to Run GraphMind
 
 ### Option 1: Standalone Static Web App (Zero-Install, Client-Side)
 This is the fastest way to explore the application using pre-seeded datasets and in-browser mock engines for Cypher and Shortest Path.
@@ -86,7 +86,7 @@ chmod +x start.sh  # Ensure the script is executable
 
 ---
 
-## 💡 Key Features to Explore
+##  Key Features to Explore
 
 * **Force-Directed Physics Canvas**: Drag nodes around, watch the graph physics update in real-time, and zoom using your trackpad or scroll wheel.
 * **Cypher-Lite queries**: Try running patterns like:
