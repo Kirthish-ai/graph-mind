@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GraphMind — Knowledge Graph Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════ LANDING PAGE -->
+<div id="landing-page" class="landing">
+
+  <!-- Nav -->
+  <nav class="landing-nav">
+    <div class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="5" cy="12" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="19" r="2"/>
+          <line x1="7" y1="12" x2="17" y2="6"/><line x1="7" y1="12" x2="17" y2="18"/>
+        </svg>
+      </div>
+      <span>GraphMind</span>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#datasets">Datasets</a>
+      <a href="#questions">Solutions</a>
+    </div>
+    <button class="nav-cta" id="btn-launch-workspace">Launch Workspace</button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">◇ KNOWLEDGE GRAPH ENGINE</div>
+    <h1 class="hero-title">
+      Graphs that<br/>
+      <span class="hero-accent">actually move.</span>
+    </h1>
+    <p class="hero-desc">
+      A Neo4j-inspired knowledge graph studio with cinematic physics. Explore, query and grow
+      connected data — run Cypher queries, trace shortest paths, and extract entities from any text.
+    </p>
+    <div class="hero-btns">
+      <button class="btn-hero-primary" id="btn-enter-workspace">ENTER WORKSPACE</button>
+      <a href="#features" class="btn-hero-ghost">SEE FEATURES</a>
+    </div>
+    <canvas id="hero-canvas"></canvas>
+  </section>
+
+  <!-- Features -->
+  <section class="features-section" id="features">
+    <div class="section-eyebrow">◇ CAPABILITIES</div>
+    <h2 class="section-title">Everything a graph database browser<br/>should be — with the motion to match.</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-tag">MOTION</div>
+        <h3>Force-directed canvas</h3>
+        <p>A handcrafted physics simulation. Drag nodes, watch the graph settle, zoom from a single node to thousands.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-tag">UX</div>
+        <h3>Live node search</h3>
+        <p>Find any node instantly by label. The canvas locks on and highlights the match in real time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-tag">ALGORITHM</div>
+        <h3>Shortest path</h3>
+        <p>BFS-based path tracing — watch the teal corridor light up between any two entities.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-tag">QUERY</div>
+        <h3>Cypher-lite playground</h3>
+        <p>A familiar pattern syntax. MATCH (a:Person)-[r:FOUNDED]->(b:Company) — the matches glow on the canvas.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-tag">EXTRACT</div>
+        <h3>Entity extraction</h3>
+        <p>Paste any text — an article, a paragraph, a paper. The engine pulls entities and relationships and plots them node by node.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-tag">INSPECT</div>
+        <h3>Node inspector</h3>
+        <p>Click any node to see its properties, labels, and full relationship list in the side panel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Datasets -->
+  <section class="datasets-section" id="datasets">
+    <div class="section-eyebrow">◇ SAMPLE DATASETS</div>
+    <h2 class="section-title">Three networks to explore<br/>the moment you arrive.</h2>
+    <div class="datasets-row">
+      <div class="dataset-card" data-dataset="movies">
+        <div class="dataset-nodes">
+          <span class="ds-node purple">MATRIX</span>
+          <span class="ds-node teal">NOLAN</span>
+          <span class="ds-node blue">INCEPTION</span>
+        </div>
+        <h3>Movies & Actors</h3>
+        <p>Iconic films and the people who made them</p>
+      </div>
+      <div class="dataset-card" data-dataset="tech">
+        <div class="dataset-nodes">
+          <span class="ds-node teal">APPLE</span>
+          <span class="ds-node blue">OPENAI</span>
+          <span class="ds-node orange">TESLA</span>
+        </div>
+        <h3>Tech Companies</h3>
+        <p>Silicon Valley founders, companies and products</p>
+      </div>
+      <div class="dataset-card" data-dataset="science">
+        <div class="dataset-nodes">
+          <span class="ds-node teal">EINSTEIN</span>
+          <span class="ds-node purple">RELATIVITY</span>
+          <span class="ds-node blue">BOHR</span>
+        </div>
+        <h3>Scientific Minds</h3>
+        <p>Physics, math and the minds behind them</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions Banner -->
+  <section class="questions-section" id="questions">
+    <div class="section-eyebrow">◇ SYSTEM DESIGN SOLUTIONS</div>
+    <h2 class="section-title">Map what you know.<br/><span class="hero-accent">Find what you didn't.</span></h2>
+    <p class="section-sub">Complete Q1–Q6 system design answers for the GraphMind knowledge graph platform — accessible inside the workspace.</p>
+    <button class="btn-hero-primary" id="btn-open-workspace-2">OPEN THE WORKSPACE</button>
+    <div class="landing-footer-note">GRAPHMIND · KNOWLEDGE GRAPH STUDIO · POWERED BY PHYSICS & CYPHER</div>
+  </section>
+
+</div><!-- /landing -->
+
+
+<!-- ═══════════════════════════════════════════════════════ WORKSPACE APP -->
+<div id="workspace-app" class="workspace hidden">
+
+  <!-- Top Toolbar -->
+  <header class="ws-toolbar">
+    <div class="ws-toolbar-left">
+      <button class="ws-back-btn" id="btn-back-to-landing">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </button>
+      <div class="ws-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="5" cy="12" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="19" r="2"/>
+          <line x1="7" y1="12" x2="17" y2="6"/><line x1="7" y1="12" x2="17" y2="18"/>
+        </svg>
+        <span>GraphMind</span>
+      </div>
+      <!-- Mode Tabs -->
+      <div class="ws-mode-tabs">
+        <button class="ws-mode-tab active" data-mode="explore">EXPLORE</button>
+        <button class="ws-mode-tab" data-mode="path">PATH</button>
+        <button class="ws-mode-tab" data-mode="query">CYPHER</button>
+        <button class="ws-mode-tab" data-mode="solutions">SOLUTIONS</button>
+      </div>
+    </div>
+    <div class="ws-toolbar-center">
+      <div class="ws-search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="ws-search" placeholder="Search nodes..." autocomplete="off" />
+      </div>
+    </div>
+    <div class="ws-toolbar-right">
+      <div class="ws-status-dot"></div>
+      <span class="ws-status-text">graphmind.db</span>
+    </div>
+  </header>
+
+  <!-- Main workspace body -->
+  <div class="ws-body">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="ws-sidebar">
+
+      <!-- Dataset Picker -->
+      <div class="ws-panel">
+        <div class="ws-panel-title">DATASET</div>
+        <div class="dataset-btns">
+          <button class="ds-btn active" data-dataset="movies">Movies & Actors</button>
+          <button class="ds-btn" data-dataset="tech">Tech Companies</button>
+          <button class="ds-btn" data-dataset="science">Scientific Minds</button>
+          <button class="ds-btn" data-dataset="graphmind">GraphMind Schema</button>
+        </div>
+      </div>
+
+      <!-- Label Filter -->
+      <div class="ws-panel">
+        <div class="ws-panel-title">LABELS</div>
+        <div id="label-filters" class="label-filters"></div>
+      </div>
+
+      <!-- Stats -->
+      <div class="ws-panel">
+        <div class="ws-panel-title">STATISTICS</div>
+        <div class="ws-stats">
+          <div class="ws-stat-row"><span>NODES</span><span id="stat-nodes" class="ws-stat-val">0</span></div>
+          <div class="ws-stat-row"><span>EDGES</span><span id="stat-edges" class="ws-stat-val">0</span></div>
+          <div class="ws-stat-row"><span>LABELS</span><span id="stat-labels" class="ws-stat-val">0</span></div>
+        </div>
+      </div>
+
+      <!-- Top Connected -->
+      <div class="ws-panel">
+        <div class="ws-panel-title">TOP CONNECTED</div>
+        <div id="top-connected" class="top-connected-list"></div>
+      </div>
+
+      <!-- Quick Queries -->
+      <div class="ws-panel">
+        <div class="ws-panel-title">QUICK QUERIES</div>
+        <div class="quick-queries">
+          <div class="quick-query" data-query="MATCH (n) RETURN n"><code>MATCH (n) RETURN n</code></div>
+          <div class="quick-query" data-query="MATCH (n:Person) RETURN n"><code>MATCH (n:Person) RETURN n</code></div>
+          <div class="quick-query" data-query="MATCH (a)-[r]->(b) RETURN a,r,b"><code>MATCH (a)-[r]->(b) RETURN a,r,b</code></div>
+          <div class="quick-query" data-query="MATCH (n:Organization) RETURN n"><code>MATCH (n:Organization) RETURN n</code></div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN CANVAS AREA -->
+    <div class="ws-canvas-area">
+
+      <!-- Canvas toolbar -->
+      <div class="canvas-toolbar">
+        <button class="canvas-tool-btn" id="btn-reset-view" title="Reset View">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        </button>
+        <button class="canvas-tool-btn" id="btn-zoom-in" title="Zoom In">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </button>
+        <button class="canvas-tool-btn" id="btn-zoom-out" title="Zoom Out">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </button>
+        <div class="canvas-tool-sep"></div>
+        <button class="canvas-tool-btn" id="btn-add-node" title="Add Node">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+        </button>
+        <button class="canvas-tool-btn" id="btn-clear-canvas" title="Clear Graph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+        </button>
+        <div class="canvas-tool-sep"></div>
+        <span class="zoom-label" id="zoom-label">100%</span>
+      </div>
+
+      <!-- Path mode banner -->
+      <div id="path-mode-banner" class="path-banner hidden">
+        <div class="path-banner-inner">
+          <span class="path-status-dot"></span>
+          <span id="path-banner-text">Click a <strong>source</strong> node on the canvas</span>
+          <button class="path-cancel-btn" id="btn-cancel-path">✕ Cancel</button>
+        </div>
+      </div>
+
+      <!-- The graph canvas -->
+      <canvas id="graph-canvas"></canvas>
+
+      <!-- Query result overlay -->
+      <div id="query-result-bar" class="query-result-bar hidden">
+        <span id="query-result-text"></span>
+        <button class="result-close-btn" id="btn-close-result">✕</button>
+      </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <aside class="ws-right-panel">
+
+      <!-- Right panel tabs -->
+      <div class="rp-tabs">
+        <button class="rp-tab active" data-rptab="inspector">INSPECTOR</button>
+        <button class="rp-tab" data-rptab="cypher">CYPHER</button>
+        <button class="rp-tab" data-rptab="extract">EXTRACT</button>
+        <button class="rp-tab" data-rptab="solutions">DOCS</button>
+      </div>
+
+      <!-- Inspector tab -->
+      <div class="rp-content active" id="rp-inspector">
+        <div class="inspector-empty" id="inspector-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9" stroke-dasharray="2 2"/></svg>
+          <p>Click any node<br/>to inspect it</p>
+        </div>
+        <div class="inspector-content hidden" id="inspector-content">
+          <div class="inspector-node-header">
+            <div class="inspector-node-dot" id="inspector-dot"></div>
+            <div>
+              <div class="inspector-node-name" id="inspector-name"></div>
+              <div class="inspector-node-label" id="inspector-label"></div>
+            </div>
+          </div>
+          <div class="inspector-section-title">PROPERTIES</div>
+          <div id="inspector-props" class="inspector-props"></div>
+          <div class="inspector-section-title">RELATIONSHIPS</div>
+          <div id="inspector-rels" class="inspector-rels"></div>
+        </div>
+      </div>
+
+      <!-- Cypher tab -->
+      <div class="rp-content" id="rp-cypher">
+        <div class="cypher-editor-area">
+          <div class="cypher-editor-header">
+            <span>CYPHER EDITOR</span>
+            <span class="cypher-hint">⌘+Enter to run</span>
+          </div>
+          <textarea id="cypher-input" class="cypher-textarea" spellcheck="false" placeholder="MATCH (n) RETURN n"></textarea>
+          <div class="cypher-actions">
+            <button class="btn-run-cypher" id="btn-run-cypher">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              RUN
+            </button>
+            <button class="btn-clear-cypher" id="btn-clear-cypher">CLEAR</button>
+          </div>
+        </div>
+        <div class="cypher-results-area">
+          <div class="cypher-results-header">RESULTS</div>
+          <div id="cypher-results" class="cypher-results">
+            <div class="cypher-results-empty">Results will appear here. Try <code>MATCH (n) RETURN n</code></div>
+          </div>
+        </div>
+        <div class="cypher-hint-box">
+          <div class="cypher-hint-title">SYNTAX GUIDE</div>
+          <div class="cypher-hint-row"><code>MATCH (n) RETURN n</code><span>All nodes</span></div>
+          <div class="cypher-hint-row"><code>MATCH (n:Person) RETURN n</code><span>By label</span></div>
+          <div class="cypher-hint-row"><code>MATCH (a)-[r]->(b) RETURN a,r,b</code><span>With rels</span></div>
+          <div class="cypher-hint-row"><code>MATCH (a)-[r:FOUNDED]->(b) RETURN a,b</code><span>By rel type</span></div>
+          <div class="cypher-hint-row"><code>MATCH (n {name:"Alice"}) RETURN n</code><span>By property</span></div>
+        </div>
+      </div>
+
+      <!-- Extract tab -->
+      <div class="rp-content" id="rp-extract">
+        <div class="extract-header">
+          <div class="extract-title">ENTITY EXTRACTION</div>
+          <p class="extract-desc">Paste any text — an article, biography, or description. The engine will extract entities and relationships and add them to the graph.</p>
+        </div>
+        <textarea id="extract-input" class="extract-textarea" placeholder="Paste text here...&#10;&#10;Example: Elon Musk founded Tesla and SpaceX. Tesla is headquartered in Austin, Texas. SpaceX launched the Falcon 9 rocket."></textarea>
+        <button class="btn-extract" id="btn-extract">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          EXTRACT ENTITIES
+        </button>
+        <div id="extract-log" class="extract-log hidden"></div>
+      </div>
+
+      <!-- Solutions / Docs tab -->
+      <div class="rp-content" id="rp-solutions">
+        <div class="solutions-list">
+          <div class="solution-item" data-sol="q1">
+            <div class="solution-num">Q1</div>
+            <div class="solution-info"><div class="solution-title">Requirements Analysis</div><div class="solution-sub">FR, NFR, scalability goals</div></div>
+            <svg class="solution-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="solution-item" data-sol="q2">
+            <div class="solution-num">Q2</div>
+            <div class="solution-info"><div class="solution-title">System Architecture</div><div class="solution-sub">Distributed components & data flow</div></div>
+            <svg class="solution-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="solution-item" data-sol="q3">
+            <div class="solution-num">Q3</div>
+            <div class="solution-info"><div class="solution-title">Construction Workflow</div><div class="solution-sub">NLP pipeline, entity resolution</div></div>
+            <svg class="solution-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="solution-item" data-sol="q4">
+            <div class="solution-num">Q4</div>
+            <div class="solution-info"><div class="solution-title">Database Design</div><div class="solution-sub">Property graph schema & IFA layout</div></div>
+            <svg class="solution-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="solution-item" data-sol="q5">
+            <div class="solution-num">Q5</div>
+            <div class="solution-info"><div class="solution-title">Algorithm & Implementation</div><div class="solution-sub">BFS, Dijkstra, Jaccard Python</div></div>
+            <svg class="solution-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="solution-item" data-sol="q6">
+            <div class="solution-num">Q6</div>
+            <div class="solution-info"><div class="solution-title">Scale & Fault Tolerance</div><div class="solution-sub">Raft, sharding, partition recovery</div></div>
+            <svg class="solution-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+      </div>
+
+    </aside><!-- /right panel -->
+  </div><!-- /ws-body -->
+
+</div><!-- /workspace -->
+
+
+<!-- SOLUTION MODAL -->
+<div id="solution-modal" class="sol-modal hidden">
+  <div class="sol-modal-backdrop" id="sol-modal-backdrop"></div>
+  <div class="sol-modal-box">
+    <div class="sol-modal-header">
+      <span id="sol-modal-title">Q1: Requirements Analysis</span>
+      <button class="sol-modal-close" id="btn-close-modal">✕</button>
+    </div>
+    <div class="sol-modal-body" id="sol-modal-body"></div>
+  </div>
+</div>
+
+<!-- ADD NODE MODAL -->
+<div id="add-node-modal" class="sol-modal hidden">
+  <div class="sol-modal-backdrop" id="add-node-backdrop"></div>
+  <div class="sol-modal-box sol-modal-sm">
+    <div class="sol-modal-header">
+      <span>Add Entity Node</span>
+      <button class="sol-modal-close" id="btn-close-add-node">✕</button>
+    </div>
+    <div class="sol-modal-body">
+      <div class="form-row">
+        <label>Entity Name</label>
+        <input type="text" id="new-node-name" placeholder="e.g. Alice, Google, Berlin" />
+      </div>
+      <div class="form-row">
+        <label>Label / Type</label>
+        <select id="new-node-label">
+          <option value="Person">Person</option>
+          <option value="Organization">Organization</option>
+          <option value="Location">Location</option>
+          <option value="Concept">Concept</option>
+          <option value="Movie">Movie</option>
+          <option value="Product">Product</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Description (optional)</label>
+        <input type="text" id="new-node-desc" placeholder="Short description" />
+      </div>
+      <div class="modal-form-actions">
+        <button class="btn-modal-cancel" id="btn-cancel-add-node">Cancel</button>
+        <button class="btn-modal-confirm" id="btn-confirm-add-node">Add Node</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
