@@ -97,4 +97,5 @@ chmod +x start.sh  # Ensure the script is executable
   ```
 * **Shortest Path Finder**: Highlight the BFS path corridor between any two entities on the canvas.
 * **Semantic Entity Extraction**: Go to the **EXTRACT** tab, paste a paragraph of raw text (e.g., *"Elon Musk founded Tesla and SpaceX. Tesla is headquartered in Austin."*), and see nodes and relationships generated and mapped on-screen instantly.
-# graph-mind
+
+---
